@@ -26,14 +26,14 @@ delay(1000);
 }
 
 void loop(){  
-//if Right Sensor and Left Sensor are at White color 
-if((digitalRead(IRR) == 0)&&(digitalRead(IRL) == 0)){forward();}   
+//if Right Sensor and Left Sensor are at Black color 
+if((digitalRead(IRR) == 1)&&(digitalRead(IRL) == 1)){forward();}   
 //if Right Sensor is Black and Left Sensor is White  
 if((digitalRead(IRR) == 1)&&(digitalRead(IRL) == 0)){turnRight();} 
 //if Right Sensor is White and Left Sensor is Black 
 if((digitalRead(IRR) == 0)&&(digitalRead(IRL) == 1)){turnLeft();}  
-//if Right Sensor and Left Sensor are at Black color 
-if((digitalRead(IRR) == 1)&&(digitalRead(IRL) == 1)){Stop();} 
+//if Right Sensor and Left Sensor are at White color 
+if((digitalRead(IRR) == 0)&&(digitalRead(IRL) == 0)){Stop();} 
 }
 
 void forward(){  //forword
